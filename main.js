@@ -241,16 +241,6 @@ function filterByMerchant(merchantId) {
   })
 
   return specificMerchantItems
-  
-  // const specificMerchantItems = []
-
-  // for (let i = 0; i < items.length; i++) {
-  //   if (items[i].attributes.merchant_id === parseInt(merchantId)) {
-  //     specificMerchantItems.push(items[i])
-  //   }
-  // }
-
-  // return specificMerchantItems
 }
 
 
