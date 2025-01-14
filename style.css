@@ -55,6 +55,8 @@ nav > button {
 
 .active-nav {
   background-color: white;
+  border: 2px solid #000000;
+  border-right: none;
 }
 
 /* MAIN */
@@ -121,10 +123,18 @@ form {
   color: red;
 }
 
+.add-new-button,
+.view-merchant-items,
+.edit-merchant,
+.delete-merchant,
+.submit-merchant-edits,
+.discard-merchant-edits {
+  border-radius: 10px;
+}
+
 /* HIDDEN ELEMENTS */
 
 .hidden {
   display: none;
 } 
   
-co
