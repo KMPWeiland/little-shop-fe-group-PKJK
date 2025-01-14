@@ -128,6 +128,9 @@ form {
   color: red;
 }
 
+#submit-merchant {
+  cursor: pointer;
+}
 /* HIDDEN ELEMENTS */
 
 .hidden {
