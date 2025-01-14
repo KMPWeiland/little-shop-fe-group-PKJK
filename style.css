@@ -51,6 +51,7 @@ nav > button {
   text-align: center;
   border-radius: 10px 0px 0px 10px;
   padding: 20px;
+  cursor: pointer;
 }
 
 .active-nav {
@@ -90,9 +91,14 @@ form {
   align-items: center;
 }
 
+.merchant button {
+  cursor: pointer;
+}
+
 .view-items-button {
   padding: 5px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .merchant-name {
@@ -107,6 +113,7 @@ form {
 
 .display-options > button {
   margin-left: 15px;
+  cursor: pointer;
 }
 
 .merchant-name-in-item {
@@ -126,5 +133,3 @@ form {
 .hidden {
   display: none;
 } 
-  
-co
