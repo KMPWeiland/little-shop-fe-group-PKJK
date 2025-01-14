@@ -1,4 +1,4 @@
-# Little Shop | Group Project | Frontend Starter Repo
+  # Little Shop | Group Project | Frontend Starter Repo
 
 This Little Shop FE Group Project Boilerplate is built to consume and display the data from the BE Rails API built in the Mod 2 Group Project.  
 
