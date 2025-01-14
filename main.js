@@ -154,6 +154,12 @@ function showMerchantItemsView(id, items) {
 // Functions that add data to the DOM
 function displayItems(items) {
   itemsView.innerHTML = ''
+  // debugger;
+  if (items.length === 0) {
+    itemsView.innerHTML = '<p class="no-items-message">No Items Yet For This Merchant</p>';
+    return;
+  }
+
   let firstHundredItems = items.slice(0, 99)
   firstHundredItems.forEach(item => {
     let merchant = findMerchant(item.attributes.merchant_id).attributes.name
@@ -213,7 +219,12 @@ function displayAddedMerchant(merchant) {
 function displayMerchantItems(event) {
   let merchantId = event.target.closest("article").id.split('-')[1]
   const filteredMerchantItems = filterByMerchant(merchantId)
-  showMerchantItemsView(merchantId, filteredMerchantItems)
+
+  if (filteredMerchantItems.length === 0) {
+    showMerchantItemsView(merchantId, [])
+  } else {
+    showMerchantItemsView(merchantId, filteredMerchantItems)
+  }
 }
 
 //Helper Functions
@@ -235,24 +246,19 @@ function addRemoveActiveNav(nav1, nav2) {
 }
 
 function filterByMerchant(merchantId) {
-  const specificMerchantItems = []
-
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].attributes.merchant_id === parseInt(merchantId)) {
-      specificMerchantItems.push(items[i])
-    }
-  }
+  
+  const specificMerchantItems = items.filter((item) => {
+    return item.attributes.merchant_id === parseInt(merchantId)
+  })
 
   return specificMerchantItems
 }
 
-function findMerchant(id) {
-  let foundMerchant;
 
-  for (let i = 0; i < merchants.length; i++) {
-    if (parseInt(merchants[i].id) === parseInt(id)) {
-      foundMerchant = merchants[i]
-      return foundMerchant
-    }
-  }
+function findMerchant(id) {
+  let foundMerchant = merchants.find((merchant) => {
+    return parseInt(merchant.id) === parseInt(id)
+  })
+  return foundMerchant
 }
+
