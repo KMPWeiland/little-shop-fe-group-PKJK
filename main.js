@@ -235,16 +235,24 @@ function addRemoveActiveNav(nav1, nav2) {
 }
 
 function filterByMerchant(merchantId) {
-  const specificMerchantItems = []
-
-  for (let i = 0; i < items.length; i++) {
-    if (items[i].attributes.merchant_id === parseInt(merchantId)) {
-      specificMerchantItems.push(items[i])
-    }
-  }
+  
+  const specificMerchantItems = items.filter((item) => {
+    return item.attributes.merchant_id === parseInt(merchantId)
+  })
 
   return specificMerchantItems
+  
+  // const specificMerchantItems = []
+
+  // for (let i = 0; i < items.length; i++) {
+  //   if (items[i].attributes.merchant_id === parseInt(merchantId)) {
+  //     specificMerchantItems.push(items[i])
+  //   }
+  // }
+
+  // return specificMerchantItems
 }
+
 
 function findMerchant(id) {
   let foundMerchant;
