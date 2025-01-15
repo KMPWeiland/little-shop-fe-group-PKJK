@@ -5,12 +5,13 @@
 }
 
 body, html {
-  background-color: gray;
+  background-color: #486F73;
 }
 
 body {
   display: flex;
   margin: 0px;
+  color: #223740;
 }
 
 /* SIDEBAR */
@@ -23,8 +24,8 @@ aside {
 header {
   text-align: center;
   margin: 10px 10px 80px 10px;
-  background-color: black;
-  color: white;
+  background-color: #223740;
+  color: #fff1e1;
   padding: 15px;
 }
 
@@ -46,17 +47,18 @@ nav {
 nav > button {
   border: none;
   margin-bottom: 20px;
-  background-color: gray;
+  background-color: #223740;
   width: 65%;
   text-align: center;
   border-radius: 10px 0px 0px 10px;
   padding: 20px;
   cursor: pointer;
+  color: #9c8871
 }
 
 .active-nav {
-  background-color: white;
-  border: 2px solid #000000;
+  background-color: #fff1e1;
+  border: 2px solid #223740;
   border-right: none;
 }
 
@@ -65,7 +67,8 @@ nav > button {
 main {
   padding: 10px;
   width: 75%;
-  background-color: white;
+  background-color: #fff1e1;
+  color: #223740;
 }
 
 form {
@@ -75,7 +78,7 @@ form {
 .item,
 .merchant {
   display: flex;
-  background-color: lightgray;
+  background-color: #BFAE99;
   margin: 10px;
   padding: 5px;
 }
@@ -123,11 +126,11 @@ form {
 }
 
 .success {
-  color: green;
+  color: #486F73;
 }
 
 .fail {
-  color: red;
+  color: #223740;
 }
 
 .add-new-button,
@@ -137,10 +140,14 @@ form {
 .submit-merchant-edits,
 .discard-merchant-edits {
   border-radius: 10px;
+  background-color: #fffcfa;
+  color: #40223a;
 }
 
 #submit-merchant {
   cursor: pointer;
+  background-color: #fffcfa;
+  color: #402236;
 }
 
 /* HIDDEN ELEMENTS */
