@@ -2,6 +2,7 @@ import './style.css'
 import {fetchData, postData, deleteData, editData} from './apiCalls'
 import {showStatus} from './errorHandling'
 
+
 //Sections, buttons, text
 const itemsView = document.querySelector("#items-view")
 const merchantsView = document.querySelector("#merchants-view")
@@ -153,27 +154,33 @@ function showMerchantItemsView(id, items) {
 
 // Functions that add data to the DOM
 function displayItems(items) {
-  itemsView.innerHTML = ''
-  // debugger;
+  itemsView.innerHTML = '';
+
+  itemsView.style.backgroundImage = 'url(https://www.americanexpress.com/content/dam/amex/en-us/benefits/shop-small/images/1111108_store.png)';
+  itemsView.style.backgroundSize = 'auto'; 
+  itemsView.style.backgroundPosition = 'top left';
+  itemsView.style.backgroundRepeat = 'repeat'; 
+
   if (items.length === 0) {
     itemsView.innerHTML = '<p class="no-items-message">No Items Yet For This Merchant</p>';
     return;
   }
 
-  let firstHundredItems = items.slice(0, 99)
+  let firstHundredItems = items.slice(0, 99);
   firstHundredItems.forEach(item => {
-    let merchant = findMerchant(item.attributes.merchant_id).attributes.name
+    let merchant = findMerchant(item.attributes.merchant_id).attributes.name;
     itemsView.innerHTML += `
      <article class="item" id="item-${item.id}">
           <img src="" alt="">
-          <h2>${item.attributes.name}</h2>
-          <p>${item.attributes.description}</p>
-          <p>$${item.attributes.unit_price}</p>
+          <h2 class="font-effect-neon">${item.attributes.name}</h2>
+          <p class="item-description">${item.attributes.description}</p>
+          <p class="item-price">$${item.attributes.unit_price}</p>
           <p class="merchant-name-in-item">Merchant: ${merchant}</p>
         </article>
-    `
-  })
+    `;
+  });
 }
+
 
 function displayMerchants(merchants) {
     merchantsView.innerHTML = ''

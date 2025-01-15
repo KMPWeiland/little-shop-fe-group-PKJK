@@ -96,6 +96,18 @@ form {
   width: 30%;
   flex-direction: column;
   justify-content: center;
+  border-style: ridge;
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.item:hover {
+  background-color: rgba(65, 0, 111, 0.89);
+}
+
+.item-price {
+  color:red ;
 }
 
 .merchant {
@@ -140,6 +152,21 @@ form {
 
 .fail {
   color: #223740;
+}
+
+.view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  text-align: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.font-effect-neon {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+  color:dodgerblue;
 }
 
 .add-new-button,
