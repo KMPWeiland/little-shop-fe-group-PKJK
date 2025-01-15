@@ -85,10 +85,13 @@ form {
   flex-direction: column;
   justify-content: center;
   border-style: ridge;
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 5px;
 }
 
 .item:hover {
-  background-color: rgb(64 0 111 / 84%);
+  background-color: rgba(65, 0, 111, 0.89);
 }
 
 .item-price {
