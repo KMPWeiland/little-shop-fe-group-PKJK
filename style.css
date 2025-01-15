@@ -1,7 +1,7 @@
 /* GENERAL */
- 
+
 * {
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif; /* Default font: Montserrat */
 }
 
 body, html {
@@ -22,7 +22,7 @@ aside {
 }
 
 header {
-  text-align: center;
+  text-align: right;
   margin: 10px 10px 80px 10px;
   background-color: #223740;
   color: #fff1e1;
@@ -30,12 +30,17 @@ header {
 }
 
 h1 {
-  font-size: 2.5em;
+  font-size: 3.5em;
+  font-family: 'Bebas Neue', sans-serif !important;
+  font-weight: 200;
+  letter-spacing: 2px;
+  
 }
 
 h1, 
 h2 {
   margin: 0;
+  font-family: 'Bebas Neue', sans-serif !important;
 }
 
 nav {
@@ -53,6 +58,8 @@ nav > button {
   border-radius: 10px 0px 0px 10px;
   padding: 20px;
   cursor: pointer;
+  font-size: medium;
+  letter-spacing: .5px;
   color: #9c8871
 }
 
@@ -60,6 +67,8 @@ nav > button {
   background-color: #fff1e1;
   border: 2px solid #223740;
   border-right: none;
+  letter-spacing: 1.2px;
+  font-size: large;
 }
 
 /* MAIN */
